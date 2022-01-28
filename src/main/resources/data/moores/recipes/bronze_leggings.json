@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "x x",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "moores:bronze_ingot"
+    }
+  },
+  "result": {
+    "item": "moores:bronze_leggings",
+    "count": 1
+  }
+}

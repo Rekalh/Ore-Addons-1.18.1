@@ -1,0 +1,5 @@
+ {
+    "variants": {
+        "": { "model": "moores:block/yttrium_ore" }
+    }
+}

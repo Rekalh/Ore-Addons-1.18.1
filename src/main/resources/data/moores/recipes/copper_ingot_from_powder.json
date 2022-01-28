@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "moores:copper_powder"
+    }
+  },
+  "result": {
+    "item": "moores:copper_ingot",
+    "count": 1
+  }
+}

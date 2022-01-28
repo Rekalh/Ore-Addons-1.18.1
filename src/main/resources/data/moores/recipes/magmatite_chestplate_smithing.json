@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moores:steel_chestplate"
+  },
+  "addition": {
+    "item": "moores:magmatite"
+  },
+  "result": {
+    "item": "moores:magmatite_chestplate"
+  }
+}

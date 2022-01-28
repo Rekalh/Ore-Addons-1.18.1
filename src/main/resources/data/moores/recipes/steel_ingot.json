@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "moores:steel_powder"
+  },
+  "result": "moores:steel_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

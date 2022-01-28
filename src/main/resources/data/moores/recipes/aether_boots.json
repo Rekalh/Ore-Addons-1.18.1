@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x x",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "moores:aether_crystal"
+    }
+  },
+  "result": {
+    "item": "moores:aether_boots",
+    "count": 1
+  }
+}

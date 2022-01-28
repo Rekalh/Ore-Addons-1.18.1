@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "moores:depleted_magmatite"
+  },
+  "result": "moores:magmatite",
+  "experience": 0.7,
+  "cookingtime": 1000
+}

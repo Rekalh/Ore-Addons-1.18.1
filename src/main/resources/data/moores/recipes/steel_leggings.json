@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "x x",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "moores:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "moores:steel_leggings",
+    "count": 1
+  }
+}

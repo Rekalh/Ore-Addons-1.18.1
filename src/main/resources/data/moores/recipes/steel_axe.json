@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xx ",
+    "xI ",
+    " I "
+  ],
+  "key": {
+    "x": {
+      "item": "moores:steel_ingot"
+    },
+    "I": { 
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "moores:steel_axe",
+    "count": 1
+  }
+}

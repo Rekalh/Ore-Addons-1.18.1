@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "moores:bronze_dust"
+    }
+  },
+  "result": {
+    "item": "moores:bronze_powder",
+    "count": 2
+  }
+}

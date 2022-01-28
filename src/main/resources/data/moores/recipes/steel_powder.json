@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "moores:steel_dust"
+    }
+  },
+  "result": {
+    "item": "moores:steel_powder",
+    "count": 2
+  }
+}

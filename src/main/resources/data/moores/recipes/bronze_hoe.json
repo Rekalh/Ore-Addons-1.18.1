@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " xx",
+    " I ",
+    " I "
+  ],
+  "key": {
+    "x": {
+      "item": "moores:bronze_ingot"
+    },
+    "I": { 
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "moores:bronze_hoe",
+    "count": 1
+  }
+}

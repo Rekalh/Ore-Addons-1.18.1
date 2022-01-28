@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moores:copper_powder"
+    },
+    { 
+      "item": "moores:tin_powder"
+    }
+  ],
+  "result": {
+    "item": "moores:bronze_dust",
+    "count": 1
+  }
+}
