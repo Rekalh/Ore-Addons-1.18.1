@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.divisionism.moores.init.ModTileEntities;
-import com.divisionism.moores.tileentities.BlazingBlackstoneTE;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -23,29 +20,15 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 
-public class BlazingBlackstone extends Block implements EntityBlock {
+public class BlazingBlackstone extends Block {
 
 	private Random random = new Random();
 
 	public BlazingBlackstone(Properties properties) {
 		super(properties);
-	}
-	
-	@Override
-	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return ModTileEntities.BLAZING_BLACKSTONE.get().create(pos, state);
-	}
-	
-	@Override
-	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> p_153214_) {
-		return (level0, pos, state0, blockEntity) -> ((BlazingBlackstoneTE) blockEntity).tick();
 	}
 	
 	@Override
@@ -93,6 +76,24 @@ public class BlazingBlackstone extends Block implements EntityBlock {
 		return true;
 	}
 
+	int ticks = 0;
+	@Override
+	public void animateTick(BlockState state, Level level, BlockPos position, Random random) {
+
+		level.addParticle(ParticleTypes.FLAME, position.getX() + random.nextDouble(), position.getY() + 1,
+				position.getZ() + random.nextDouble(), 0, 0.01, 0);
+		level.addParticle(ParticleTypes.FLAME, position.getX() + random.nextDouble(), position.getY(),
+				position.getZ() + random.nextDouble(), 0, -0.01, 0);
+		level.addParticle(ParticleTypes.FLAME, position.getX() + random.nextDouble(), position.getY() + random.nextDouble(),
+				position.getZ() + 1, 0, 0, 0.01);
+		level.addParticle(ParticleTypes.FLAME, position.getX() + random.nextDouble(), position.getY() + random.nextDouble(),
+				position.getZ(), 0, 0, -0.01);
+		level.addParticle(ParticleTypes.FLAME, position.getX() + 1, position.getY() + random.nextDouble(),
+				position.getZ() + random.nextDouble(), 0.01, 0, 0);
+		level.addParticle(ParticleTypes.FLAME, position.getX(), position.getY() + random.nextDouble(),
+				position.getZ() + random.nextDouble(), -0.01, 0, 0);
+	}
+	
 	@Override
 	public void randomTick(BlockState state, ServerLevel LevelIn, BlockPos pos, Random random) {
 		if (getSurroundingBlocks(LevelIn, pos).contains(Blocks.AIR)) {
