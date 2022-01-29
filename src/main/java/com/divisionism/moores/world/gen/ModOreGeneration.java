@@ -97,35 +97,4 @@ public class ModOreGeneration {
 		Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID + "yttium_ore"), YTTRIUM_ORE_CF);
 		Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID + "blazing_blackstone"), BLAZING_BLACKSTONE_CF);
 	}
-	
-	/*
-	 * addOre(event.getGeneration(), BLACKSTONE,
-	 * ModBlocks.BLAZING_BLACKSTONE.get().defaultBlockState(), 20, 0, 100, 10);
-	 * 
-	 * if (isGeneratingBiome(event, ModBiomes.AETHER_MOUNTAINS.get())) {
-	 * addOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-	 * ModBlocks.AETHER_CRYSTAL_BLOCK.get().defaultBlockState(), 1, 0, 254, 15); } }
-	 * 
-	 * private static void addOre(BiomeGenerationSettingsBuilder settings, RuleTest
-	 * fillerType, BlockState state, int veinSize, int minHeight, int maxHeight, int
-	 * spawnRate) { settings.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-	 * Feature.ORE.configured(new OreFeatureConfig(fillerType, state, veinSize))
-	 * .decorated(Placement.RANGE.configured(new TopSolidRangeConfig(minHeight, 0,
-	 * maxHeight))) .squared().count(spawnRate)); }
-	 * 
-	 * private static boolean isGeneratingBiome(final BiomeLoadingEvent event, Biome
-	 * biome) { return event.getCategory().equals(biome.getBiomeCategory()) &&
-	 * event.getDepth() == biome.getDepth() && event.getScale() == biome.getScale();
-	 * }
-	 * 
-	 * 
-	 * private static void addOreInCaves(BiomeGenerationSettingsBuilder settings,
-	 * BlockStateProvider provider, Set<Block> whitelist, Set<BlockState> blacklist,
-	 * int count, Vector3i spread) {
-	 * settings.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION,
-	 * Feature.NO_BONEMEAL_FLOWER .configured(new
-	 * BlockClusterFeatureConfig.Builder(provider, new SimpleBlockPlacer())
-	 * .whitelist(whitelist).blacklist(blacklist).xspread(spread.getX()).yspread(
-	 * spread.getY()) .zspread(spread.getZ()).tries(count).build())); }
-	 */
 }
