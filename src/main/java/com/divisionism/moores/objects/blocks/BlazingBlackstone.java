@@ -76,7 +76,6 @@ public class BlazingBlackstone extends Block {
 		return true;
 	}
 
-	int ticks = 0;
 	@Override
 	public void animateTick(BlockState state, Level level, BlockPos position, Random random) {
 
