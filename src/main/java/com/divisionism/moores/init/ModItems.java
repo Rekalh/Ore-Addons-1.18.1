@@ -124,9 +124,9 @@ public class ModItems {
 	public static final RegistryObject<MagmatiteHelmetItem> MAGMATITE_HELMET = ITEMS.register("magmatite_helmet",
 			() -> new MagmatiteHelmetItem(ModArmorMaterials.MAGMATITE, EquipmentSlot.HEAD,
 					new Item.Properties().tab(ModCreativeTabs.TOOLS).fireResistant()));
-	public static final RegistryObject<MagmatiteChestplateItem> MAGMATITE_CHESTPLATE = ITEMS.register("magmatite_chestplate", 
-			() -> new MagmatiteChestplateItem(ModArmorMaterials.MAGMATITE,EquipmentSlot.CHEST, 
-					new Item.Properties().tab(ModCreativeTabs.TOOLS).fireResistant()));
+	public static final RegistryObject<MagmatiteChestplateItem> MAGMATITE_CHESTPLATE = ITEMS
+			.register("magmatite_chestplate", () -> new MagmatiteChestplateItem(ModArmorMaterials.MAGMATITE,
+					EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeTabs.TOOLS).fireResistant()));
 	public static final RegistryObject<MagmatiteLeggingsItem> MAGMATITE_LEGGINGS = ITEMS.register("magmatite_leggings",
 			() -> new MagmatiteLeggingsItem(ModArmorMaterials.MAGMATITE, EquipmentSlot.LEGS,
 					new Item.Properties().tab(ModCreativeTabs.TOOLS).fireResistant()));
@@ -162,4 +162,6 @@ public class ModItems {
 			() -> new BlockItem(ModBlocks.TIN_BLOCK.get(), new Item.Properties().tab(ModCreativeTabs.ORES)));
 	public static final RegistryObject<BlockItem> BRONZE_BLOCK_ITEM = ITEMS.register("bronze_block",
 			() -> new BlockItem(ModBlocks.BRONZE_BLOCK.get(), new Item.Properties().tab(ModCreativeTabs.ORES)));
+	public static final RegistryObject<BlockItem> AETHER_CRYSTAL_GENERATOR_ITEM = ITEMS.register("aether_crystal_generator",
+			() -> new BlockItem(ModBlocks.AETHER_CRYSTAL_GENERATOR.get(), new Item.Properties()));
 }

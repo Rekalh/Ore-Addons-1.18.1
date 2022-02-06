@@ -1,6 +1,7 @@
 package com.divisionism.moores.init;
 
 import com.divisionism.moores.OreAddons;
+import com.divisionism.moores.objects.blocks.AetherCrystalGeneratorBlock;
 import com.divisionism.moores.objects.blocks.BlazingBlackstone;
 import com.divisionism.moores.objects.blocks.CrystalMef;
 
@@ -30,14 +31,14 @@ public class ModBlocks {
 	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore",
 			() -> new Block(Block.Properties.copy(Blocks.GOLD_ORE)));
 	public static final RegistryObject<Block> BLAZING_BLACKSTONE = BLOCKS.register("blazing_blackstone",
-			() -> new BlazingBlackstone(Block.Properties.of(Material.STONE).
-					strength(20f).lightLevel((state) -> {
-						return 10;
-					})));
+			() -> new BlazingBlackstone(Block.Properties.of(Material.STONE).strength(20f).lightLevel((state) -> {
+				return 10;
+			})));
 	public static final RegistryObject<Block> YTTRIUM_ORE = BLOCKS.register("yttrium_ore",
 			() -> new Block(Block.Properties.copy(Blocks.NETHER_QUARTZ_ORE)));
-	public static final RegistryObject<Block> AETHER_CRYSTAL_BLOCK = BLOCKS.register("aether_block", () -> new Block(
-			Block.Properties.of(Material.STONE).sound(SoundType.NETHERRACK).requiresCorrectToolForDrops().strength(50, 50)));
+	public static final RegistryObject<Block> AETHER_CRYSTAL_BLOCK = BLOCKS.register("aether_block",
+			() -> new Block(Block.Properties.of(Material.STONE).sound(SoundType.NETHERRACK)
+					.requiresCorrectToolForDrops().strength(50, 50)));
 	public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block",
 			() -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
 	public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block",
@@ -46,4 +47,6 @@ public class ModBlocks {
 			() -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
 	public static final RegistryObject<Block> BRONZE_BLOCK = BLOCKS.register("bronze_block",
 			() -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
+	public static final RegistryObject<Block> AETHER_CRYSTAL_GENERATOR = BLOCKS.register("aether_crystal_generator",
+			() -> new AetherCrystalGeneratorBlock(Block.Properties.copy(Blocks.STONE)));
 }

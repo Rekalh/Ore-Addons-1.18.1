@@ -59,13 +59,13 @@ public class BlazingBlackstone extends Block {
 	}
 	
 	@Override
-	public void appendHoverText(ItemStack stack, BlockGetter LevelIn, List<Component> tooltip,
+	public void appendHoverText(ItemStack stack, BlockGetter level, List<Component> tooltip,
 			TooltipFlag flagIn) {
 		tooltip.add(new TranslatableComponent("tooltip.moores.blazing_blackstone"));
 	}
 	
 	@Override
-	public void stepOn(Level LevelIn, BlockPos pos, BlockState state, Entity entityIn) {
+	public void stepOn(Level level, BlockPos pos, BlockState state, Entity entityIn) {
 		if (entityIn instanceof LivingEntity) {
 			((LivingEntity) entityIn).setSecondsOnFire(60);;
 		}
@@ -94,35 +94,35 @@ public class BlazingBlackstone extends Block {
 	}
 	
 	@Override
-	public void randomTick(BlockState state, ServerLevel LevelIn, BlockPos pos, Random random) {
-		if (getSurroundingBlocks(LevelIn, pos).contains(Blocks.AIR)) {
+	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random) {
+		if (getSurroundingBlocks(level, pos).contains(Blocks.AIR)) {
 			for (int i = 0; i < 50; i++) {
-				LevelIn.sendParticles(ParticleTypes.SMOKE, pos.getX() + 0.5f, pos.getY() + 0.5f, pos.getZ() + 0.5f,
+				level.sendParticles(ParticleTypes.SMOKE, pos.getX() + 0.5f, pos.getY() + 0.5f, pos.getZ() + 0.5f,
 						random.nextInt(5), 0.1f, 0, 0.1f, 0.1f);
-				LevelIn.sendParticles(ParticleTypes.FLAME, pos.getX() + 0.5f, pos.getY() + 0.5f, pos.getZ() + 0.5f,
+				level.sendParticles(ParticleTypes.FLAME, pos.getX() + 0.5f, pos.getY() + 0.5f, pos.getZ() + 0.5f,
 						random.nextInt(5), 0.1f, 0, 0.1f, 0.1f);
-				LevelIn.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5f, pos.getY() + 0.5f,
+				level.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5f, pos.getY() + 0.5f,
 						pos.getZ() + 0.5f, 1, 0.1f, 0, 0.1f, 0.1f);
 			}
 		}
 	}
 	
-	private ArrayList<Block> getSurroundingBlocks(Level Level, BlockPos pos) {
+	private ArrayList<Block> getSurroundingBlocks(Level level, BlockPos pos) {
 		ArrayList<Block> surroundingBlocks = new ArrayList<>();
 		for (int x = -1; x < 2; x++) {
 			if (x == 0)
 				continue;
-			surroundingBlocks.add(Level.getBlockState(new BlockPos(pos.getX() + x, pos.getY(), pos.getZ())).getBlock());
+			surroundingBlocks.add(level.getBlockState(new BlockPos(pos.getX() + x, pos.getY(), pos.getZ())).getBlock());
 		}
 		for (int z = -1; z < 2; z++) {
 			if (z == 0)
 				continue;
-			surroundingBlocks.add(Level.getBlockState(new BlockPos(pos.getX(), pos.getY(), pos.getZ() + z)).getBlock());
+			surroundingBlocks.add(level.getBlockState(new BlockPos(pos.getX(), pos.getY(), pos.getZ() + z)).getBlock());
 		}
 		for (int y = -1; y < 2; y++) {
 			if (y == 0)
 				continue;
-			surroundingBlocks.add(Level.getBlockState(new BlockPos(pos.getX(), pos.getY() + y, pos.getZ())).getBlock());
+			surroundingBlocks.add(level.getBlockState(new BlockPos(pos.getX(), pos.getY() + y, pos.getZ())).getBlock());
 		}
 		return surroundingBlocks;
 	}

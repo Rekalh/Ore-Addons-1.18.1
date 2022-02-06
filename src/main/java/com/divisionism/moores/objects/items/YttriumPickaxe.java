@@ -5,7 +5,6 @@ import java.util.List;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -55,30 +54,37 @@ public class YttriumPickaxe extends PickaxeItem {
 		tooltip.add(new TranslatableComponent("tooltip.moores.yttrium_pickaxe_1"));
 		tooltip.add(new TranslatableComponent("tooltip.moores.yttrium_pickaxe_2")
 				.append(new TextComponent("\u00A72 " + mode.getDisplayName())));
+		
+		stack.getOrCreateTag().putString("mode", this.mode.getName());
 	}
 	
 	int counter = 0;
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 		
-		if (!world.isClientSide) {
-			
-			counter++;
-			if (counter > 2) counter = 0;
-			
-			this.mode = Mode.values()[counter]; // Gets the next mode
-			this.isNone = (mode.getName() == "none");
-			
-			ItemStack stack = player.getItemInHand(hand);
-			CompoundTag nbt = stack.getOrCreateTag(); // Creates new tag or gets existing one
-			nbt.putString("mode", this.mode.getName()); // Appends the new mode to the nbt
-			stack.setTag(nbt); // Sets the tag to the modified nbt
-			
-			player.sendMessage(new TextComponent(ChatFormatting.YELLOW + "Changed mode to: " + ChatFormatting.GREEN + mode.getDisplayName()), player.getUUID());
+		if (!player.isCrouching()) {
+			if (!world.isClientSide) {
+					
+				counter++;
+				if (counter > 2) counter = 0;
+				
+				this.mode = Mode.values()[counter]; // Gets the next mode
+				this.isNone = (mode.getName() == "none");
+				
+				player.getItemInHand(hand).getOrCreateTag().putString("mode", this.mode.getName());
+				player.sendMessage(new TextComponent(player.getItemInHand(hand).getOrCreateTag().getAsString()), player.getUUID());
+				player.sendMessage(new TextComponent(ChatFormatting.YELLOW + "Changed mode to: " + ChatFormatting.GREEN + mode.getDisplayName()), player.getUUID());
+			}
+				
+			if (!this.mode.getName().equals("aoe")) world.playSound(player, player.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.NEUTRAL, 1f, 1f);
+			else world.playSound(player, player.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.NEUTRAL, 1f, 0.7f);
+		} 
+		else if (this.mode != Mode.NONE) {
+			this.mode = Mode.NONE;
+			this.isNone = true;
+			this.counter = 0;
+			world.playSound(player, player.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.NEUTRAL, 1f, 0.7f);
 		}
-		
-		if (!this.mode.getName().equals("aoe")) world.playSound(player, player.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.NEUTRAL, 1f, 1f);
-		else world.playSound(player, player.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.NEUTRAL, 1f, 0.7f);
 		
 		return InteractionResultHolder.success(player.getItemInHand(hand));
 	}
@@ -101,7 +107,7 @@ public class YttriumPickaxe extends PickaxeItem {
 			
 			int blocksBroken = 0;
 			// AoE
-			if (itemstack.getTag().getString("mode").equals("aoe")) {
+			if (this.mode.getName().equals("aoe")) {
 				world.playSound(player, new BlockPos(player.position()), SoundEvents.PLAYER_LEVELUP, SoundSource.NEUTRAL, 1.0f, 1.0f);
 				
 				for (int x = -1; x < 2; x++) {
@@ -116,7 +122,7 @@ public class YttriumPickaxe extends PickaxeItem {
 			}
 			
 			//Vein Miner
-			if (itemstack.getTag().getString("mode").equals("veinminer")) {
+			if (this.mode.getName().equals("veinminer")) {
 				
 				int radius = 2;
 				Block block = world.getBlockState(pos).getBlock();
@@ -131,7 +137,7 @@ public class YttriumPickaxe extends PickaxeItem {
 				for (int x = -radius; x <= radius; x++) {
 					for (int y = -radius; y <= radius; y++) {
 						for (int z = -radius; z <= radius; z++) {
-							if (world.getBlockState(bPos.offset(x, y, z)).getBlock() == block) {
+							if (world.getBlockState(bPos.offset(x, y, z)).getBlock() == block) { //TODO: Fix issue regarding the mod ores
 								
 								world.destroyBlock(bPos.offset(x, y, z), !player.isCreative());
 								

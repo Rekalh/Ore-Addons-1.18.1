@@ -7,7 +7,7 @@ import com.divisionism.moores.creativetabs.ModCreativeTabs;
 import com.divisionism.moores.init.ModAttributes;
 import com.divisionism.moores.init.ModBlocks;
 import com.divisionism.moores.init.ModItems;
-import com.divisionism.moores.init.ModTileEntities;
+import com.divisionism.moores.init.ModBlockEntities;
 import com.divisionism.moores.world.gen.ModOreGeneration;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -32,7 +32,7 @@ public class OreAddons {
 
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModTileEntities.TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModBlockEntities.TILE_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModAttributes.ATTRIBUTES.register(FMLJavaModLoadingContext.get().getModEventBus());
         
         new ModCreativeTabs();

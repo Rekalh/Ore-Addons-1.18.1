@@ -53,6 +53,9 @@ public class ModOreGeneration {
 	public static final ConfiguredFeature<?, ?> BLAZING_BLACKSTONE_CF = addOreConf(BLACKSTONE, ModBlocks.BLAZING_BLACKSTONE.get().defaultBlockState(), 15, 0.0f);
 	public static final PlacedFeature BLAZING_BLACKSTONE_PF = addOrePlaced(BLAZING_BLACKSTONE_CF, 20, 0, 100);
 	
+	public static final ConfiguredFeature<?, ?> AETHER_CRYSTAL_SPAWNER_CF = addOreConf(STONE, ModBlocks.AETHER_CRYSTAL_GENERATOR.get().defaultBlockState(), 1, 1f);
+	public static final PlacedFeature AETHER_CRYSTAL_SPAWNER_PF = addOrePlaced(AETHER_CRYSTAL_SPAWNER_CF, 100, -20, 50);
+	
 	private static ConfiguredFeature<?, ?> addOreConf(RuleTest placement, BlockState ore, int veinSize, float exposure) {
 		return Feature.ORE.configured(new OreConfiguration(placement, ore, veinSize, exposure));
 	}
@@ -84,6 +87,7 @@ public class ModOreGeneration {
 		// Here
 		OVERWORLD_ORES.add(Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID, "copper_ore"), COPPER_ORE_PF));
 		OVERWORLD_ORES.add(Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID, "tin_ore"), TIN_ORE_PF));
+		OVERWORLD_ORES.add(Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID, "aether_crystal_spawner"), AETHER_CRYSTAL_SPAWNER_PF));
 		NETHER_ORES.add(Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID, "yttrium_ore"), YTTRIUM_ORE_PF));
 		NETHER_ORES.add(Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID, "blazing_blackstone"), BLAZING_BLACKSTONE_PF));
 	}
@@ -94,6 +98,7 @@ public class ModOreGeneration {
 		// And here
 		Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID + "copper_ore"), COPPER_ORE_CF);
 		Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID + "tin_ore"), TIN_ORE_CF);
+		Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID + "aether_crystal_spawner"), AETHER_CRYSTAL_SPAWNER_CF);
 		Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID + "yttium_ore"), YTTRIUM_ORE_CF);
 		Registry.register(registry, new ResourceLocation(OreAddons.MOD_ID + "blazing_blackstone"), BLAZING_BLACKSTONE_CF);
 	}

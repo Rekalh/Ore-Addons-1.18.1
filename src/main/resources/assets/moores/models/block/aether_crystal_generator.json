@@ -1,0 +1,6 @@
+{
+      "parent": "block/cube_all", 
+      "textures": {
+            "all": "moores:blocks/aether_crystal_generator"
+      }
+}

@@ -1,0 +1,7 @@
+{
+      "variants": {
+            "": {
+                  "model": "moores:block/aether_crystal_generator"
+            }
+      }
+}
