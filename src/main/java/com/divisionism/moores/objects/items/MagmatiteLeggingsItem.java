@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
@@ -45,7 +46,7 @@ public class MagmatiteLeggingsItem extends ArmorItem {
 			return;
 		Player player = (Player) entityIn;
 		if (this.getDamage(stack) == this.getMaxDamage(stack) - 1) {
-			ItemStack leggings = new ItemStack(ModItems.STEEL_LEGGINGS.get());
+			ItemStack leggings = new ItemStack(Items.NETHERITE_LEGGINGS);
 			leggings.setDamageValue(initialDamage);
 			player.getInventory().setItem(37, leggings);
 			worldIn.playSound(player, player.blockPosition(), SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f,

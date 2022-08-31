@@ -41,7 +41,7 @@ public class ForgeClientEventSubscriber {
 			player.addItem(stack);
 		}
 	}
-
+	
 	// Float when wearing aether boots
 	static double damage = 0;
 	@SubscribeEvent

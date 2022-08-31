@@ -56,17 +56,17 @@
 	"biome.aether_mountains": "Aether Mountains",
 	
 	"itemGroup.ingots": "Ore addons Materials and Ingots",
-	"itemGroup.ores": "Ore addons Ores",
+	"itemGroup.ores": "Ore addons Ores and Blocks",
 	"itemGroup.tools": "Ore addons Tools",
 	
 	"tooltip.moores.blazing_blackstone": "\u00A74\u00A7lBeware! \u00A7e\u00A7oExtremely hot mineral.",
 	"tooltip.moores.magmatite_armor_1": "\u00A77Full set bonus:",
 	"tooltip.moores.magmatite_armor_2": "\u00A76+Fire Resistance",
-	"tooltip.moores.aether_boots": "\u00A77\u00A7oAnd thus, Jesus was born",
+	"tooltip.moores.aether_boots": "\u00A77\u00A7o<Insert Jesus joke here>",
 	"tooltip.moores.yttrium_pickaxe_2": "\u00A79\u00A7oMode:",
 	"tooltip.moores.yttrium_pickaxe_1": "\u00A77\u00A7o<Right click to change modes>",
+	"tooltip.moores.yttrium_pickaxe_3": "\u00A7c\u00A7o<Shift + Right click to reset mode>",
 	"tooltip.moores.the_bible": "Placeholder tooltip",
-	"tooltip.moores.aoe": "\u00A77Area of effect\u00A7r \u00A72<Selected>",
 	
 	"attribute.name.generic.float": "Floats on water",
 	"attribute.name.generic.slow_falling": "\u00A7eSlow falling",

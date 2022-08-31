@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "moores:steel_chestplate"
+    "item": "minecraft:netherite_chestplate"
   },
   "addition": {
     "item": "moores:magmatite"

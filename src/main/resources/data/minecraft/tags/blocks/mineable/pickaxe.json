@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "moores:copper_ore",
+    "moores:tin_ore",
+    "moores:blazing_blackstone",
+    "moores:yttrium_ore",
+    "moores:aether_block",
+    "moores:steel_block",
+    "moores:copper_block",
+    "moores:tin_block",
+    "moores:bronze_block"
+  ]
+}

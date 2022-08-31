@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.divisionism.moores.init.ModItems;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -13,6 +15,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -55,7 +58,13 @@ public class BlazingBlackstone extends Block {
 			level.setBlock(pos, Blocks.BLACKSTONE.defaultBlockState(), 0);
 
 		}
-		super.setPlacedBy(level, pos, state, placer, stack);
+	}
+	
+	@SuppressWarnings("deprecation")
+	@Override
+	public void onRemove(BlockState p_60515_, Level p_60516_, BlockPos p_60517_, BlockState p_60518_, boolean p_60519_) {
+		super.onRemove(p_60515_, p_60516_, p_60517_, p_60518_, p_60519_);
+		//p_60516_.setBlock(p_60517_, Blocks.WATER.defaultBlockState(), UPDATE_NONE);
 	}
 	
 	@Override

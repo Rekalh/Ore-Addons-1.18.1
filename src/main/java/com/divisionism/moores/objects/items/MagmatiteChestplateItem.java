@@ -19,6 +19,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
@@ -49,13 +50,13 @@ public class MagmatiteChestplateItem extends ArmorItem {
 		if (!(entityIn instanceof Player))
 			return;
 		Player player = (Player) entityIn;
+		
 		if (this.getDamage(stack) == this.getMaxDamage(stack) - 1) {
-			ItemStack chestplate = new ItemStack(ModItems.STEEL_CHESTPLATE.get());
+			ItemStack chestplate = new ItemStack(Items.NETHERITE_CHESTPLATE);
 			chestplate.setDamageValue(initialDamage);
 			player.getInventory().setItem(38, chestplate);
 			worldIn.playSound(player, player.blockPosition(), SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0f,
 					1.0f);
-			//player.inventory.add(0, new ItemStack(ModItems.DEPLETED_MAGMATITE.get()));
 			player.getInventory().add(new ItemStack(ModItems.DEPLETED_MAGMATITE.get()));
 		}
 		if (this.getArmorWearing(player.getInventory(), itemSlot).contains(ModItems.MAGMATITE_CHESTPLATE.get())

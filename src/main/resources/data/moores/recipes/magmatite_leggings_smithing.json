@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "moores:steel_leggings"
+    "item": "minecraft:netherite_leggings"
   },
   "addition": {
     "item": "moores:magmatite"

@@ -2,8 +2,8 @@ package com.divisionism.moores.objects.blocks;
 
 import java.util.Random;
 
-import com.divisionism.moores.init.ModBlocks;
 import com.divisionism.moores.init.ModBlockEntities;
+import com.divisionism.moores.init.ModBlocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

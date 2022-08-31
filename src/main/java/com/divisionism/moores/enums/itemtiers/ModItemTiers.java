@@ -7,10 +7,12 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum ModItemTiers implements Tier {
-	BRONZE(2000, 10, 5, 5, 15, Ingredient.of(ModItems.COPPER_INGOT.get())),
-	STEEL(1000, 7, 5, 4, 10, Ingredient.of(ModItems.STEEL_INGOT.get())),
+	
+	BRONZE(350, 8, 5, 4, 15, Ingredient.of(ModItems.BRONZE_INGOT.get())),
+	STEEL(300, 7, 5, 4, 10, Ingredient.of(ModItems.STEEL_INGOT.get())),
 	YTTRIUM(600, 6, 3, 4, 10, Ingredient.of(Items.IRON_INGOT)),
-	THE_BIBLE(5, 100, 0, 10, 20, Ingredient.of(Items.PAPER));
+	THE_BIBLE(5, 100, 0, 10, 20, Ingredient.of(Items.PAPER)),
+	FARADIUM(6000, 20, 5, 6, 20, Ingredient.EMPTY);
 
 	private int durability;
 	private int efficiency;
