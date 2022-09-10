@@ -55,7 +55,7 @@ public class ForgeClientEventSubscriber {
 			if (player.getItemBySlot(EquipmentSlot.FEET).sameItem(new ItemStack(ModItems.AETHER_BOOTS.get()))) {
 				ItemStack item = player.getItemBySlot(EquipmentSlot.FEET);
 				
-				if (player.level.getFluidState(player.blockPosition().offset(0, -0.06, 0)).isSource()
+				if (player.level.getFluidState(player.blockPosition().offset(0, 1, 0)).isSource() // -0.06
 						|| player.level.getFluidState(player.blockPosition()).isSource()) {
 					player.setDeltaMovement(player.getDeltaMovement().x * amplifier, player.getDeltaMovement().y + 0.02,
 							player.getDeltaMovement().z * amplifier);

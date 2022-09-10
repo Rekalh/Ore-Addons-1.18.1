@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "moores:anvil_block",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "minecraft:block/anvil",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "minecraft:block/anvil"
+    },
+    "facing=west": {
+      "model": "minecraft:block/anvil",
+      "y": 90
+    }
+  }
+}

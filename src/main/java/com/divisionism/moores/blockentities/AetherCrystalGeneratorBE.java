@@ -1,4 +1,4 @@
-package com.divisionism.moores.tileentities;
+package com.divisionism.moores.blockentities;
 
 import com.divisionism.moores.init.ModBlockEntities;
 

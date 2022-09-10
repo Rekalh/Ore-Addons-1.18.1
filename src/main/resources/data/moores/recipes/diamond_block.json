@@ -1,0 +1,17 @@
+{
+	"type": "moores:anvil",
+	
+	"input": {
+		"item": "minecraft:diamond"
+	},
+	"hammer": {
+		"item": "moores:steel_hammer"
+	},
+	"extra": {
+		"item": "minecraft:charcoal"
+	},
+	"output": {
+		"item": "minecraft:diamond_block",
+		"count": 2
+	}
+}

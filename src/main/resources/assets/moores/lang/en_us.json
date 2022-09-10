@@ -16,6 +16,10 @@
 	"item.moores.depleted_magmatite": "Depleted Magmatite",
 	"item.moores.aether_crystal": "Aether Crystal",
 	"item.moores.aether_shard": "Aether Shard",
+	"item.moores.yttrium_ingot": "Yttrium Ingot",
+	"item.moores.hot_yttrium_ingot": "Yttrium Ingot (Hot)",
+	"item.moores.yttrium_sheet": "Sheet of Yttrium",
+	"item.moores.hot_yttrium_sheet": "Sheet of Yttrium (Hot)",
 	
 	"item.moores.steel_sword": "Steel Sword",
 	"item.moores.steel_pickaxe": "Steel Pickaxe",
@@ -41,6 +45,15 @@
 	"item.moores.magmatite_boots": "Magmatite Boots",
 	"item.moores.aether_boots": "Aether Boots",
 	"item.moores.yttrium_pickaxe": "Yttrium-coated pickaxe",
+	"item.moores.hot_yttrium_pickaxe": "Yttrium-coated pickaxe (Hot)",
+	"item.moores.steel_hammer": "Steel Hammer",
+	"item.moores.yttrium_chunk": "Chunk of Yttrium",
+	"item.moores.oxidized_yttrium_fragment": "Oxidized Yttrium Fragment",
+	"item.moores.yttrium_fragment": "Yttrium Fragment",
+	"item.moores.hot_yttrium_fragment": "Yttrium Fragment (Hot)",
+	"item.moores.yttrium_nugget": "Yttrium Nugget",
+	"item.moores.hot_yttrium_nugget": "Yttrium Nugget (Hot)",
+	
 	"item.moores.the_bible": "The Holy Bible",
 	
 	"block.moores.copper_ore": "Copper Ore",
@@ -52,6 +65,9 @@
 	"block.moores.blazing_blackstone": "Blazing Blackstone",
 	"block.moores.aether_block": "Crystalized Stone",
 	"block.moores.yttrium_ore": "Yttrium Ore",
+	"block.moores.anvil_block": "Steel Anvil",
+	
+	"container.moores.anvil_title": "Steel Anvil",
 	
 	"biome.aether_mountains": "Aether Mountains",
 	
@@ -67,6 +83,8 @@
 	"tooltip.moores.yttrium_pickaxe_1": "\u00A77\u00A7o<Right click to change modes>",
 	"tooltip.moores.yttrium_pickaxe_3": "\u00A7c\u00A7o<Shift + Right click to reset mode>",
 	"tooltip.moores.the_bible": "Placeholder tooltip",
+	"tooltip.moores.hot_item": "\u00A76\u00A7o[Hot Item | Sets you on fire]",
+	"tooltip.moores.burning_item": "\u00A79\u00A7o[Throw in water to cool down faster]",
 	
 	"attribute.name.generic.float": "Floats on water",
 	"attribute.name.generic.slow_falling": "\u00A7eSlow falling",

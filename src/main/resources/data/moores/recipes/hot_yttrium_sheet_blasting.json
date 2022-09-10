@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "moores:yttrium_sheet"
+  },
+  "result": "moores:hot_yttrium_sheet",
+  "experience": 0.7,
+  "cookingtime": 1000
+}

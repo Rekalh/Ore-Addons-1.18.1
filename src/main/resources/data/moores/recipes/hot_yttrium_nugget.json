@@ -1,0 +1,16 @@
+{
+	"type": "moores:anvil",
+	"input": {
+		"item": "moores:hot_yttrium_fragment",
+		"count": 9
+	},
+	"hammer": {
+		"item": "moores:steel_hammer"
+	},
+	"extra": {
+		"item": ""
+	},
+	"output": {
+		"item": "moores:hot_yttrium_nugget"
+	}
+}

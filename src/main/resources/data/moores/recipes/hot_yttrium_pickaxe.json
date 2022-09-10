@@ -1,0 +1,16 @@
+{
+	"type": "moores:anvil",
+	"input": {
+		"item": "moores:steel_pickaxe"
+	},
+	"hammer": {
+		"item": "moores:steel_hammer"
+	},
+	"extra": {
+		"item": "moores:hot_yttrium_sheet",
+		"count": 4
+	},
+	"output": {
+		"item": "moores:hot_yttrium_pickaxe"
+	}
+}

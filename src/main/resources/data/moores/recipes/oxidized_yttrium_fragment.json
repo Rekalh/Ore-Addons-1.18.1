@@ -1,0 +1,15 @@
+{
+	"type": "moores:anvil",
+	"input": {
+		"item": "moores:yttrium_chunk"
+	},
+	"hammer": {
+		"item": "moores:steel_hammer"
+	},
+	"extra": {
+		"item": ""
+	},
+	"output": {
+		"item": "moores:oxidized_yttrium_fragment"
+	}
+}

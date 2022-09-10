@@ -13,6 +13,9 @@ import com.divisionism.moores.objects.items.MagmatiteChestplateItem;
 import com.divisionism.moores.objects.items.MagmatiteHelmetItem;
 import com.divisionism.moores.objects.items.MagmatiteLeggingsItem;
 import com.divisionism.moores.objects.items.YttriumPickaxe;
+import com.divisionism.moores.utils.BurningItem;
+import com.divisionism.moores.utils.HammerItem;
+import com.divisionism.moores.utils.HotItem;
 
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
@@ -42,7 +45,7 @@ public class ModItems {
 	public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",
 			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
 	public static final RegistryObject<Item> MAGMATITE = ITEMS.register("magmatite",
-			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS).fireResistant()));
+			() -> new HotItem(new Item.Properties().tab(ModCreativeTabs.INGOTS).fireResistant(), 9));
 	public static final RegistryObject<Item> AETHER_CRYSTAL = ITEMS.register("aether_crystal",
 			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
 	public static final RegistryObject<Item> IRON_POWDER = ITEMS.register("iron_powder",
@@ -62,12 +65,32 @@ public class ModItems {
 	public static final RegistryObject<Item> BRONZE_DUST = ITEMS.register("bronze_dust",
 			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
 	public static final RegistryObject<Item> MAGMATITE_FRAGMENT = ITEMS.register("magmatite_fragment",
-			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS).fireResistant()));
+			() -> new HotItem(new Item.Properties().tab(ModCreativeTabs.INGOTS).fireResistant(), 1));
 	public static final RegistryObject<Item> DEPLETED_MAGMATITE = ITEMS.register("depleted_magmatite",
 			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS).fireResistant()));
 	public static final RegistryObject<Item> AETHER_SHARD = ITEMS.register("aether_shard",
 			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
-
+	public static final RegistryObject<Item> YTTRIUM_INGOT = ITEMS.register("yttrium_ingot",
+			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
+	public static final RegistryObject<Item> HOT_YTTRIUM_INGOT = ITEMS.register("hot_yttrium_ingot",
+			() -> new BurningItem(new Item.Properties(), YTTRIUM_INGOT.get(), 120, 100));
+	public static final RegistryObject<Item> YTTRIUM_SHEET = ITEMS.register("yttrium_sheet",
+			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
+	public static final RegistryObject<Item> HOT_YTTRIUM_SHEET = ITEMS.register("hot_yttrium_sheet",
+			() -> new BurningItem(new Item.Properties(), YTTRIUM_SHEET.get(), 60, 25));
+	public static final RegistryObject<Item> YTTRIUM_CHUNK = ITEMS.register("yttrium_chunk",
+			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
+	public static final RegistryObject<Item> OXIDIZED_YTTRIUM_FRAGMENT = ITEMS.register("oxidized_yttrium_fragment",
+			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
+	public static final RegistryObject<Item> YTTRIUM_FRAGMENT = ITEMS.register("yttrium_fragment",
+			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
+	public static final RegistryObject<Item> HOT_YTTRIUM_FRAGMENT = ITEMS.register("hot_yttrium_fragment",
+			() -> new BurningItem(new Item.Properties(), YTTRIUM_FRAGMENT.get(), 60, 50));
+	public static final RegistryObject<Item> YTTRIUM_NUGGET = ITEMS.register("yttrium_nugget",
+			() -> new Item(new Item.Properties().tab(ModCreativeTabs.INGOTS)));
+	public static final RegistryObject<Item> HOT_YTTRIUM_NUGGET = ITEMS.register("hot_yttrium_nugget",
+			() -> new BurningItem(new Item.Properties(), YTTRIUM_NUGGET.get(), 60, 25));
+	
 	public static final RegistryObject<SwordItem> THE_BIBLE = ITEMS.register("the_bible",
 			() -> new BibleItem(ModItemTiers.THE_BIBLE, 0, 5,
 					new Item.Properties().fireResistant().stacksTo(1).rarity(Rarity.EPIC)));
@@ -95,6 +118,10 @@ public class ModItems {
 			() -> new HoeItem(ModItemTiers.BRONZE, 0, 0, new Item.Properties().tab(ModCreativeTabs.TOOLS)));
 	public static final RegistryObject<PickaxeItem> YTTRIUM_PICKAXE = ITEMS.register("yttrium_pickaxe",
 			() -> new YttriumPickaxe(ModItemTiers.YTTRIUM, 2, -2.8f, new Item.Properties().tab(ModCreativeTabs.TOOLS)));
+	public static final RegistryObject<HammerItem> STEEL_HAMMER = ITEMS.register("steel_hammer",
+			() -> new HammerItem(ModItemTiers.STEEL, 20, -3.5f, new Item.Properties().tab(ModCreativeTabs.TOOLS)));
+	public static final RegistryObject<BurningItem> HOT_YTTRIUM_PICKAXE = ITEMS.register("hot_yttrium_pickaxe",
+			() -> new BurningItem(new Item.Properties().stacksTo(1), YTTRIUM_PICKAXE.get(), 120, 300));
 
 	// Armor
 	public static final RegistryObject<ArmorItem> STEEL_HELMET = ITEMS.register("steel_helmet",
@@ -162,6 +189,9 @@ public class ModItems {
 			() -> new BlockItem(ModBlocks.TIN_BLOCK.get(), new Item.Properties().tab(ModCreativeTabs.ORES)));
 	public static final RegistryObject<BlockItem> BRONZE_BLOCK_ITEM = ITEMS.register("bronze_block",
 			() -> new BlockItem(ModBlocks.BRONZE_BLOCK.get(), new Item.Properties().tab(ModCreativeTabs.ORES)));
-	public static final RegistryObject<BlockItem> AETHER_CRYSTAL_GENERATOR_ITEM = ITEMS.register("aether_crystal_generator",
+	public static final RegistryObject<BlockItem> AETHER_CRYSTAL_GENERATOR_ITEM = ITEMS.register(
+			"aether_crystal_generator",
 			() -> new BlockItem(ModBlocks.AETHER_CRYSTAL_GENERATOR.get(), new Item.Properties()));
+	public static final RegistryObject<BlockItem> ANVIL_BLOCK_ITEM = ITEMS.register("anvil_block",
+			() -> new BlockItem(ModBlocks.ANVIL_BLOCK.get(), new Item.Properties().tab(ModCreativeTabs.ORES)));
 }

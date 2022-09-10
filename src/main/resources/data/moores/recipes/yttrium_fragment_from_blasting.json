@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "moores:oxidized_yttrium_fragment"
+  },
+  "result": "moores:yttrium_fragment",
+  "experience": 0.7,
+  "cookingtime": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "moores:yttrium_fragment"
+  },
+  "result": "moores:hot_yttrium_fragment",
+  "experience": 0.7,
+  "cookingtime": 1000
+}

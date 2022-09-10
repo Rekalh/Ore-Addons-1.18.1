@@ -1,4 +1,4 @@
-package com.divisionism.moores.tileentities;
+package com.divisionism.moores.blockentities;
 
 import java.util.Random;
 

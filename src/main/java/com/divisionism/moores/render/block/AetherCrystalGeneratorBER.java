@@ -1,7 +1,7 @@
 package com.divisionism.moores.render.block;
 
+import com.divisionism.moores.blockentities.AetherCrystalGeneratorBE;
 import com.divisionism.moores.objects.blocks.AetherCrystalGeneratorBlock;
-import com.divisionism.moores.tileentities.AetherCrystalGeneratorBE;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import net.minecraft.client.Minecraft;

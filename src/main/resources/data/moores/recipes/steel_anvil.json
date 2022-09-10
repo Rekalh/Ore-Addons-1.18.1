@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    " I ",
+    "III"
+  ],
+  "key": {
+    "x": {
+      "item": "moores:steel_block"
+    },
+    "I": { 
+      "item": "moores:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "moores:anvil_block",
+    "count": 1
+  }
+}
